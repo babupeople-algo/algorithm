@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <array>
 
-#define ARR_SIZE 20
+#define ARR_SIZE 30
 
 void swap(int& a, int& b)
 {
@@ -109,7 +109,6 @@ void quick_partition(std::array<int, ARR_SIZE>& arr, int start, int end)
 
 	std::cout << " start = " << start << ", end = " << end << ", pivot = "<< pivot << std::endl;
 
-
 	while (n_start <= n_end)
 	{
 		while (arr[n_start] <= pivot && n_start < n_end)
@@ -118,7 +117,6 @@ void quick_partition(std::array<int, ARR_SIZE>& arr, int start, int end)
 		{
 			n_end--;
 			if (n_end < 0) { n_end = 0; break; }
-
 		}
 		if (n_start < n_end)
 			swap(arr[n_start], arr[n_end]);
